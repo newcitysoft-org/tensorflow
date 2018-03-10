@@ -97,8 +97,10 @@ def main(_):
   # No longer need keep_prob since removing dropout layers.
   y_conv = deepnn(x)
   output = tf.nn.softmax(y_conv, name='output')
-
-  saver = tf.train.Saver(tf.global_variables(),write_version=tf.train.SaverDef.V1)#
+  # V1版本保存为.ckpt文件格式
+  saver = tf.train.Saver(tf.global_variables(),write_version=tf.train.SaverDef.V1)
+  # 默认版本保存方式为文件夹形式
+  # saver = tf.train.Saver(tf.global_variables())
   with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     sess.run(tf.local_variables_initializer())

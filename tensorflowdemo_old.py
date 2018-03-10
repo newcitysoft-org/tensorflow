@@ -150,7 +150,12 @@ def main(_):
   print('Saving graph to: %s' % graph_location)
   train_writer = tf.summary.FileWriter(graph_location)
   train_writer.add_graph(tf.get_default_graph())
+  # V1版本保存为.ckpt文件格式
   saver = tf.train.Saver(write_version=tf.train.SaverDef.V1)
+  # 默认版本保存方式为文件夹形式
+  # saver = tf.train.Saver()
+
+
   with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     for i in range(1000):
