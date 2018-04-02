@@ -1,0 +1,5 @@
+guitar
+car
+airplane
+flower
+motorbike
