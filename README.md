@@ -30,3 +30,5 @@ tensorflowdemo5.py：（含线性回归算法，2层卷积神经元，计算交�
 tensorflowdemo_new.py：神经元棒应用 数字训练模型
 
 tensorflowdemo_old.py：神经元棒应用 数字训练模型
+
+tensorflowdemo16.py：需创建文件夹pic
